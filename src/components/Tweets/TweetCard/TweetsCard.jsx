@@ -11,15 +11,15 @@ export const TweetsCard = () => {
   const [totalPages, setTotalPages] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    fetchAllUsers()
-      .then((response) => {
-        setTotalPages(Math.ceil(response / 3));
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  });
+  // useEffect(() => {
+  //   fetchAllUsers()
+  //     .then((response) => {
+  //       setTotalPages(Math.ceil(response / 3));
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // });
 
   useEffect(() => {
     setIsLoading(true);

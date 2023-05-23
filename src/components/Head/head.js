@@ -2,7 +2,7 @@
 import { useContext } from "react";
 import style from "./head.module.css"
 import { Context } from "../../App";
-const Home = () => {
+const Head = () => {
   const { setShow } = useContext(Context);
   const { show } = useContext(Context);
   return (
@@ -17,4 +17,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Head;

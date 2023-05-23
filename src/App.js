@@ -2,7 +2,8 @@ import { createContext, lazy, Suspense } from "react";
 import { useState } from "react";
 import { Loader } from "./components/Loader/Loader";
 export const Context = createContext()
-const Home = lazy(() => import("./components/Head/head"));
+export const AllUsers = createContext()
+const Head = lazy(() => import("./components/Head/head"));
 const TweetsPage = lazy(() => import("./components/Tweets/TweetsPage"));
 
 export const App = () => {
@@ -13,7 +14,7 @@ export const App = () => {
       setShow: setShowTweets,
     }}>
       <Suspense fallback={<Loader />}>
-        <Home />
+        <Head />
         {showTweets && (<TweetsPage />)}
       </Suspense></Context.Provider>
 
