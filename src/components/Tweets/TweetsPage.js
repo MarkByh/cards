@@ -1,5 +1,5 @@
 
-import { Tweets } from "./TweetCard/TweetsCard";
+import { TweetsCard } from "./TweetCard/TweetsCard";
 import style from "./Tweets.module.css";
 const TweetsPage = ({ isLoading }) => {
 
@@ -7,7 +7,7 @@ const TweetsPage = ({ isLoading }) => {
   return (
     <div className={style.tweetContainer}>
       <h2 className={style.usersTitle}>Users</h2>
-      <Tweets />
+      <TweetsCard />
     </div>
   );
 };

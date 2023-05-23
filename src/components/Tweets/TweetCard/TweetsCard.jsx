@@ -5,7 +5,7 @@ import background from "../../../images/background.png";
 import { updateUser, fetchUsers, fetchAllUsers } from "../../../services/api";
 import { Loader } from "../../Loader/Loader";
 
-export const Tweets = () => {
+export const TweetsCard = () => {
   const [users, setUsers] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
