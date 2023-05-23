@@ -105,9 +105,9 @@ export const TweetsCard = () => {
             <div className={style.avatarCircle}>
               <img className={style.avatar} src={avatar} alt="user_photo" />
             </div>
-            <p className={style.cardText}>{tweets} weets</p>
+            <p className={style.cardText}>{tweets.toLocaleString()} tweets</p>
             <p className={style.cardtextmargin}>
-              {followers.toLocaleString("en-Us")} followers
+              {followers.toLocaleString()} followers
             </p>
             <button
               className={style.cardBtn}
