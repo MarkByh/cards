@@ -8,12 +8,12 @@ const TweetsPage = lazy(() => import("./components/Tweets/TweetsPage"));
 
 export const App = () => {
   const [showTweets, setShowTweets] = useState(false);
-  const [totalUsers, setTotalUsers] = useState('')
+
   return (
     <Context.Provider value={{
       show: showTweets,
       setShow: setShowTweets,
-      totalUsers, setTotalUsers
+
     }}>
       <Suspense fallback={<Loader />}>
         <Head />
