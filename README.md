@@ -1,14 +1,16 @@
-# Getting Started with Create React App
+# Description of the project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-# Dependencies
+## Dependencies
 
 This React app uses the following libraries:
 
 axios: Used for making HTTP requests and fetching data.
 react: The core library for building user interfaces in React.
 react-loader-spinner: Provides a customizable loading spinner component.
+
+# Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # Getting Started
 
@@ -28,4 +30,3 @@ Once the installation is complete, you can start using the React app.
 Run the following command to start the development server: 'npm start'
 
 This command will start the development server, if it doesn't open automatically, you can access it at http://localhost:3000.
-
