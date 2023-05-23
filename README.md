@@ -1,16 +1,13 @@
 # Description of the project
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 ## Dependencies
 
 This React app uses the following libraries:
 
-axios: Used for making HTTP requests and fetching data.
-react: The core library for building user interfaces in React.
-react-loader-spinner: Provides a customizable loading spinner component.
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+axios: Axios is a promise-based HTTP Client for node.js and the browser.
+react: React lets you build user interfaces out of individual pieces called components.
 
 # Getting Started
 

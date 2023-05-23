@@ -14,7 +14,7 @@ export const TweetsCard = () => {
   useEffect(() => {
     fetchAllUsers()
       .then((response) => {
-        setTotalPages(response / 3);
+        setTotalPages(response / 4);
       })
       .catch((error) => {
         console.log(error);
@@ -93,7 +93,7 @@ export const TweetsCard = () => {
   return (
     <>
       <ul className={style.usersList}>
-        {users.map(({ id, tweets, followers, avatar, following }) => (
+        {users.map(({ id, tweets, followers, following, avatar }) => (
           <li className={style.userCard} key={id}>
             <img className={style.logo} src={logo} alt="Logo" />
             <img
