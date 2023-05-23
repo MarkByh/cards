@@ -106,7 +106,9 @@ export const TweetsCard = () => {
               <img className={style.avatar} src={avatar} alt="user_photo" />
             </div>
             <p className={style.cardText}>{tweets} weets</p>
-            <p className={style.cardtextmargin}>{followers} followers</p>
+            <p className={style.cardtextmargin}>
+              {followers.toLocaleString("en-Us")} followers
+            </p>
             <button
               className={style.cardBtn}
               style={{ backgroundColor: following ? "#5CD3A8" : "" }}

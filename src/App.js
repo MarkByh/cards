@@ -7,8 +7,6 @@ const TweetsPage = lazy(() => import("./components/Tweets/TweetsPage"));
 
 export const App = () => {
   const [showTweets, setShowTweets] = useState(false);
-
-
   return (
     <Context.Provider value={{
       show: showTweets,
