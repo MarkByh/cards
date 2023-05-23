@@ -1,15 +1,13 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import style from "./tweetsCard.module.css";
 import logo from "../../../images/logo.png";
 import background from "../../../images/background.png";
 import { updateUser, fetchUsers, fetchAllUsers } from "../../../services/api";
-import { Loader } from "../../Loader/Loader";
+import { useTweetContext } from "../Context/twetsContects";
 
 export const TweetsCard = () => {
-  const [users, setUsers] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(0);
-  const [isLoading, setIsLoading] = useState(false);
+  const { users, setUsers, currentPage, setTotalPages, setIsLoading } =
+    useTweetContext();
 
   useEffect(() => {
     fetchAllUsers()
@@ -32,27 +30,6 @@ export const TweetsCard = () => {
       })
       .finally(setIsLoading(false));
   }, []);
-
-  const handleLoadMore = () => {
-    const nextPage = currentPage + 1;
-    setIsLoading(true);
-    fetchUsers(nextPage)
-      .then((response) => {
-        const uniqueUsers = response.filter(
-          (user) => !users.some((existing) => existing.id === user.id)
-        );
-        setUsers((prevUsers) => [...prevUsers, ...uniqueUsers]);
-        setCurrentPage(nextPage);
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-      .finally(setIsLoading(false));
-  };
-
-  if (isLoading) {
-    return <Loader />;
-  }
 
   const handleFollow = async (id, following, followers) => {
     try {
@@ -121,12 +98,6 @@ export const TweetsCard = () => {
           </li>
         ))}
       </ul>
-
-      {currentPage < totalPages && (
-        <button className={style.loadBtn} onClick={handleLoadMore}>
-          Load More
-        </button>
-      )}
     </>
   );
 };

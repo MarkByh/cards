@@ -1,14 +1,16 @@
-
 import { TweetsCard } from "./TweetCard/TweetsCard";
+import { LoadBtn } from "./LoadMoreBtn/loadMoreBtn";
 import style from "./Tweets.module.css";
-const TweetsPage = ({ isLoading }) => {
-
-
+import TweetsContext from "./Context/twetsContects";
+const TweetsPage = () => {
   return (
-    <div className={style.tweetContainer}>
-      <h2 className={style.usersTitle}>Users</h2>
-      <TweetsCard />
-    </div>
+    <TweetsContext>
+      <div className={style.tweetContainer}>
+        <h2 className={style.usersTitle}>Users</h2>
+        <TweetsCard />
+        <LoadBtn />
+      </div>
+    </TweetsContext>
   );
 };
 
